@@ -24,3 +24,8 @@ class Redis:
         for key, val in [line.split(':') for line in out.splitlines()]:
             stats[key] = val
         return stats
+
+
+if __name__ == '__main__':
+    redis = Redis(None, None, None)
+    print redis.run()
