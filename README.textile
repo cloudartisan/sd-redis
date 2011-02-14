@@ -13,7 +13,7 @@ h2. Installation
 * Edit the Redis plugin and create groups for the graphs
 * You can determine the full list of available keys using "redis-cli info".  Eg,
 
-<code>
+<pre>
   $ /usr/local/redis/redis-cli info
   redis_version:2.0.4
   redis_git_sha1:00000000
@@ -42,29 +42,29 @@ h2. Installation
   vm_enabled:0
   role:master
   db0:keys=4,expires=0
-</code>
+</pre>
 
 * To get you started, here are some example groups you might find useful
 
-<code>
+<pre>
   Title: Status
   connected_clients
   connected_slaves
   blocked_clients
   expired_keys
   changes_since_last_save
-</code>
+</pre>
 
-<code>
+<pre>
   Title: PubSub
   pubsub_channels
   pubsub_patterns
-</code>
+</pre>
 
-<code>
+<pre>
   Title: Memory
   used_memory
-</code>
+</pre>
 
 * Configure your agent so that it knows about plugins http://www.serverdensity.com/docs/agent/plugins/ 
 * Move Redis.py into that directory 
