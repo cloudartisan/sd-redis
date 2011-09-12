@@ -25,9 +25,9 @@ class Redis:
     def redis_info_cmd(self):
         if self.raw_config.get('Redis') and self.raw_config['Redis'].get('password'):
                 self.checks_logger.debug('Found Redis password in config')
-                return "redis_cli -a %s info" % self.raw_config['Redis']['password']
+                return "redis-cli -a %s info" % self.raw_config['Redis']['password']
         else:
-                return "redis_cli info"
+                return "redis-cli info"
 
 
 if __name__ == '__main__':
