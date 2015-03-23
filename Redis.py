@@ -18,7 +18,9 @@ class Redis:
             return stats
         # Grab every statistic available and leave it to the end user to
         # determine which fields they care about
-        for key, val in [line.split(':') for line in out.splitlines()]:
+        for line in out.splitlines():
+          if line.find(':') != -1:
+            key, val = line.split(':')
             stats[key] = val
         return stats
 
